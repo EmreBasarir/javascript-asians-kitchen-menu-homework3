@@ -122,20 +122,15 @@ console.log(menuJapanObjects)
 console.log(menuChinaObjects)
 console.log(menu)
 
-
+// butonlara click event'i oluşturarak kendi yemeklerini çağıran fonsiyonları çalıştırdık.
   allBtnDOM.addEventListener('click', selectAll)
   console.log(this.id)
   koreaBtnDOM.addEventListener('click', selectKorea)
   japanBtnDOM.addEventListener('click', selectJapan)
   chinaBtnDOM.addEventListener('click', selectChina)
 
-
-
 // Print all foods to screen
 function selectAll() {
-  selectKorea = false
-  selectChina = false
-  selectJapan = false
   let printScreen = menu.map((item) => {
     return `<div class="menu-items col-lg-6 col-sm-12">
             <img
@@ -158,12 +153,8 @@ function selectAll() {
   sectionDOM.innerHTML = printScreen
 }
 
-
 // Print Korea foods to screen
 function selectKorea() {
-  selectAll = false
-  selectChina = false
-  selectJapan = false
   printScreen = menuKoreaObjects.map((item) => {
     return `<div class="menu-items col-lg-6 col-sm-12">
             <img
@@ -186,12 +177,8 @@ function selectKorea() {
   sectionDOM.innerHTML = printScreen
 }
 
-
 // Print Japan foods to screen
 function selectJapan() {
-  selectAll = false
-  selectChina = false
-  selectKorea = false
   printScreen = menuJapanObjects.map((item) => {
     return `<div class="menu-items col-lg-6 col-sm-12">
             <img
@@ -214,12 +201,8 @@ function selectJapan() {
   sectionDOM.innerHTML = printScreen
 }
 
-
 // Print China foods to screen
 function selectChina() {
-  selectAll = false
-  selectKorea = false
-  selectJapan = false
   printScreen = menuChinaObjects.map((item) => {
     return `<div class="menu-items col-lg-6 col-sm-12">
             <img
